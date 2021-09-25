@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sandbox-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        -name: sandbox-frontend
+        -image: us-west1-docker.pkg.dev/sandbox-327103/sandbox-containers/sandbox_client
+        -ports:
+          -containerPort: 80
