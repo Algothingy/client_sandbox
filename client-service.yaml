@@ -6,4 +6,5 @@ spec:
   ports:
     - port: 80
       protocol: TCP
-    selector: sandbox-client
+  selector:
+    app: web
