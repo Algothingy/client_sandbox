@@ -13,7 +13,7 @@ spec:
         app: web
     spec:
       containers:
-        -name: sandbox-frontend
-        -image: us-west1-docker.pkg.dev/sandbox-327103/sandbox-containers/sandbox_client
-        -ports:
-          -containerPort: 80
+        - name: sandbox-frontend
+        - image: us-west1-docker.pkg.dev/sandbox-327103/sandbox-containers/sandbox_client
+        - ports:
+          - containerPort: 80
