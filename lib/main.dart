@@ -50,9 +50,9 @@ class _MyHomePageState extends State<MyHomePage> {
   String? _msg;
 
   void _requestFromAPI()async {
-    print("Requesting from API");
+    print("Requesting from API at api-service");
     //var url = Uri.http('sandboxapi', '');
-    var url = Uri.http('api-service', '');
+    var url = Uri.http('api-service', 'api');
     var response = await http.get(url);
     print("response = $response");
     if (response.statusCode == 200)
