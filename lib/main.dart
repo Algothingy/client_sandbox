@@ -48,13 +48,14 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   String? _msg;
+  String algothingyIp = '34.149.209.38';
 
   void _requestFromAPI()async {
-    print("Requesting from API at api-service");
+    print("Requesting from API at nginx proxy from algothingy sandbox at static ip");
     //var url = Uri.http('sandboxapi', '');
-    var url = Uri.http('api-service', 'api');
+    var url = Uri.http(algothingyIp, 'api');
     var response = await http.get(url);
-    print("response = $response");
+    print("response code = ${response.statusCode}; response body = ${response.body}");
     if (response.statusCode == 200)
       setState(() {
         // This call to setState tells the Flutter framework that something has
